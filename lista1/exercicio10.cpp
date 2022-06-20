@@ -7,15 +7,14 @@ int main() {
     float a, b, soma, sub, multi, div, res;
     char op, nova;
 
-    cout << "num1: " << endl;
-    cin >> a;
-    cout << "op: " << endl;
-    cin >> op;
-    cout << "num2: " << endl;
-    cin >> b;
-
-
     do {
+        cout << "num1: " << endl;
+        cin >> a;
+        cout << "op: " << endl;
+        cin >> op;
+        cout << "num2: " << endl;
+        cin >> b;
+
         switch(op)
         {
         case '+':
