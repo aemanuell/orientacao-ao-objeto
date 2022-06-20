@@ -3,11 +3,13 @@
 using namespace std;
 
 int main(){
-    char caractere, carac;
+    int num; 
+    char caractere;
 
-    cout << "Digite um carctere ";
+    cout << "Digite um carctere:  ";
     cin >> caractere;
-    printf("The ASCII value of %c is: %d\n",caractere, caractere);
+    num = caractere;
+    cout << num << endl;
 
     return 0; 
 }
