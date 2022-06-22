@@ -1,16 +1,24 @@
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
 int main() {
-    int n, quadrado=0, soma=0;
+    char str[100], first_char, last_char;
+    int aux=0;
+
+    scanf("%s", str);
+    first_char = str[0];
+    aux = strlen(str);
+    // printf("%d aux", aux);
     
-    cout << "Digite n positivo" << endl;
-    cin >> n;
-    for (int i=1; i <= n; i++) {
-       quadrado = i*i;
-       soma += quadrado;
+    for(int i=0;i<strlen(str);i++){
+        // printf("%c ",str[i]);
+        if (i == aux-1){
+            last_char = str[i];
+        }
     }
-    cout << "A soma dos quadrados é: " << soma << endl;
-    return 0;
+
+    printf("%c primeiro\n",first_char);
+    printf("%c ultimo\n",last_char);
 }
