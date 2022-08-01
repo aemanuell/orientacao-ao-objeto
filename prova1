@@ -1,0 +1,59 @@
+matricula: 150118210
+
+QUESTÃO 1:
+
+#include <iostream>
+
+using namespace std;
+
+struct avaliacao{
+    float nota;
+    char grau;
+};
+
+int main(){
+    int aux = 0;
+    avaliacao avalia;
+
+    for (int i = 1; i <= 3; i++){
+        do {
+            cout << "Digite uma nota válida (0 a 10.0) " << endl;
+            cin >> avalia.nota; 
+        } while (avalia.nota > 10 || avalia.nota < 0);
+
+        if (avalia.nota >= 0 && avalia.nota <= 4){
+            avalia.grau = 'I';
+        } else if (avalia.nota >= 4.1 && avalia.nota <= 6.9){
+            avalia.grau = 'M';
+            aux++;
+        } else if (avalia.nota >= 7.0 && avalia.nota <= 10){
+            avalia.grau = 'S';
+            aux++;
+        }
+
+        cout << "Estudante " << i << " Aprovado, com a nota: " << avalia.nota << " grau: " << avalia.grau << endl; 
+    }
+
+        cout << "Número de estudantes aprovados: " << aux << endl;
+}
+
+--------------------
+
+QUESTÃO 2:
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num; char ch = 65, aux;
+    cout << "Digite a altura de um triângulo: \n";
+    cin >> num;
+
+    for(int i = 1; i <= num; i++){
+        for(int j = 0; j < i; j++){
+            cout << ch++;
+        }
+        cout << "\n";
+    }
+}

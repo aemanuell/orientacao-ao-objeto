@@ -2,7 +2,14 @@
 
 using namespace std;
 
-void parametros(int nro, char ch){
+struct parametros
+{
+    int numumero;
+    char caracter;
+};
+
+
+void param(int nro, char ch){
     for (int i = 1; i <= nro; i++){
         for (int i = 1; i <= 10; i++){
             cout << ch;
@@ -12,13 +19,12 @@ void parametros(int nro, char ch){
 }
 
 int main(){
-
-    int num; char c;
+    parametros argumentos;
 
     cout << "Digite um número e um caracter ";
-    cin >> num >> c;
+    cin >> argumentos.numumero >> argumentos.caracter;
 
-    parametros(num, c);
+    param(argumentos.numumero, argumentos.caracter);
 
     return 0;
 }
