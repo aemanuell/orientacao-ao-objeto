@@ -7,38 +7,45 @@ class livro {
         int livroID, paginas;
         float preco;
     public:
-        void obter(int lid, int pg, float pr){
+        void obter(){
+            cout << "Digite o ID do livro: "; cin >> livroID;
+            cout << "Digite o numero de páginas do livro: "; cin >> paginas;
+            cout << "Digite o preço do livro: "; cin >> preco;
+        }
+
+        void mostrar (){
+            cout << "O ID do livro é: " << livroID;
+            cout << "O numero de páginas do livro é: " << paginas;
+            cout << "O preço do livro é: " << preco;
+        }
+
+        void definir(int lid, int pg, float pr){
             livroID = lid;
             paginas = pg;
             preco = pr;
         }
 
-        void definir(int lid, int pg, float pr){
-            
-        }
+        
 
-        void mostrar (){
-            cout << "O ID do livro, paginas, e preço, respectivamente são: " << livroID << paginas << preco;
-        }
-
-        int mostrarpreco(){
-            return preco;
+        float mostrarpreco(){
+            return (preco);
         }
 };
 
-void livro::mostrar(){
-    if (mostrarpreco() > preco){
-            cout << "sim";
-    }
-    
-}
-
 int main(){
 
-    livro livro1;
+    livro livro1, livro2;
 
-    livro1.obter(10, 20, 30.5);
-    livro1.mostrar();
+    livro1.obter();
+    livro2.obter();
+
+    if (livro1.mostrarpreco() > livro2.mostrarpreco()){
+        livro1.mostrar();
+    } else {
+        livro2.mostrar();
+    }
+    
+
 
     return 0;
 }
